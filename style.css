@@ -17,6 +17,19 @@
     padding: 0;
     font: inherit;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: hidden;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -53,7 +66,7 @@ main {
     margin-bottom: 20px;
 }
 
-h5 {
+h4 {
     color: var(--primary-brightYellow);
     font-weight: 700;
     font-size: 1.125rem;
@@ -149,7 +162,7 @@ button {
     #join h2 {
         font-size: 20px;
     }
-    #join h5 {
+    #join h4 {
         font-size: 16px;
     }
     #join p {
