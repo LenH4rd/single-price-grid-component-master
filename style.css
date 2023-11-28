@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --primary-Cyan: hsl(179, 62%, 43%);
+    --primary-brightYellow: hsl(71, 73%, 54%);
+
+    --neutral-lightGray: hsl(204, 43%, 93%);
+    --neutral-grayishBlue: hsl(218, 22%, 67%);
+    --neutral-lightCyan: hsl(179, 47%, 52%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 1rem;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--neutral-lightGray);
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+    "join join"
+    "monthly-subscription why-us";
+    width: max(635px, min(310px));
+    background-color: var(--neutral-lightGray);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 1px 20px 20px rgb(216, 228, 237);
+}
+
+#join {
+    grid-area: join;
+    background-color: white;
+    padding: 50px 60px 48px 41px;
+}
+
+
+#join h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary-Cyan);
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: var(--primary-brightYellow);
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+
+#join p {
+    color: var(--neutral-grayishBlue);
+}
+
+#monthly-subscription {
+    background-color: var(--primary-Cyan);
+    grid-area: monthly-subscription;
+    padding: 45px 40px 39px 40px;
+}
+
+#monthly-subscription h3 {
+    font-size: 24px;
+    color: var(--neutral-lightGray);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#monthly-subscription div {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    margin-bottom: 10px;
+}
+
+span {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--neutral-lightGray);
+}
+
+.month {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: var(--neutral-lightCyan);
+}
+
+.description {
+    color: var(--neutral-lightGray);
+    margin-bottom: 40px;
+}
+button {
+    width: 100%;
+    background-color: var(--primary-brightYellow);
+    border: none;
+    border-radius: 5px;
+    height: 48px;
+    color: white;
+    box-shadow: 0px 10px 20px rgb(37, 163, 161);
+}
+
+#why-us {
+    background-color:var(--neutral-lightCyan);
+    grid-area: why-us;
+    padding: 45px 79px 45px 40px;
+    font-size: 14px;
+}
+
+#why-us h3 {
+    font-size: 24px;
+    color: var(--neutral-lightGray);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#why-us p {
+    color: var(--neutral-lightGray);
+    line-height: 1.5em;
+}
+
+/*Mobile version*/
+
+@media only screen and (max-width: 768px){
+
+    main {
+    display: grid;
+    grid-template-areas: 
+    "join"
+    "monthly-subscription"
+    "why-us";
+    margin: 20px;
+    }
+
+    #join {
+        padding: 25px 30px 24px 21px;
+    }
+    #join h2 {
+        font-size: 20px;
+    }
+    #join h5 {
+        font-size: 16px;
+    }
+    #join p {
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    #monthly-subscription {
+        padding: 25px 20px 25px 20px;
+    }
+    #monthly-subscription h3 {
+        font-size: 18px;
+    }
+    #monthly-subscription div {
+        grid-template-columns: 0.4fr 1fr;
+    }
+
+    #why-us {
+        padding: 45px 79px 45px 20px;
+    }
+
+}
